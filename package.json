@@ -1,0 +1,25 @@
+{
+  "name": "shopify-admin-api-with-sdk",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "codegen": "graphql-codegen --config graphql.config.ts"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^5.0.4",
+    "@graphql-codegen/typescript-graphql-request": "^6.3.0",
+    "@graphql-codegen/typescript-operations": "^5.0.4",
+    "@shopify/api-codegen-preset": "^1.0.0",
+    "graphql-request": "^7.3.4",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "graphql-tag": "^2.12.6"
+  }
+}

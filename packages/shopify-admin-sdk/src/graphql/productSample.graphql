@@ -1,0 +1,13 @@
+mutation ProductUpdateBasic($product: ProductUpdateInput!) {
+  productUpdate(product: $product) {
+    product {
+      id
+      title
+      status
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

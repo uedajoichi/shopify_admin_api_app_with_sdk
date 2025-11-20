@@ -1,0 +1,17 @@
+#graphql
+mutation ProductCreate(
+  $product: ProductCreateInput!
+  $media: [CreateMediaInput!]
+) {
+  productCreate(product: $product, media: $media) {
+    product {
+      id
+      title
+      status
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
