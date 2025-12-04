@@ -1,0 +1,27 @@
+mutation ProductVariantPricingUpdate(
+  $productId: ID!
+  $variants: [ProductVariantsBulkInput!]!
+) {
+  productVariantsBulkUpdate(
+    productId: $productId
+    variants: $variants
+    allowPartialUpdates: true
+  ) {
+    product {
+      id
+      title
+    }
+    productVariants {
+      id
+      sku
+      price # ★ ここを scalar としてそのまま取得
+      inventoryItem {
+        id
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

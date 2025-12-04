@@ -1,4 +1,4 @@
-#graphql
+# packages/shopify-admin-sdk/src/graphql/productCreate.graphql
 mutation ProductCreate(
   $product: ProductCreateInput!
   $media: [CreateMediaInput!]
@@ -8,6 +8,14 @@ mutation ProductCreate(
       id
       title
       status
+      variants(first: 1) {
+        nodes {
+          id
+          inventoryItem {
+            id
+          }
+        }
+      }
     }
     userErrors {
       field

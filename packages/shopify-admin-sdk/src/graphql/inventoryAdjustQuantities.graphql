@@ -1,0 +1,17 @@
+# packages/shopify-admin-sdk/src/graphql/inventoryAdjustQuantities.graphql
+mutation InventoryAdjustAvailable($input: InventoryAdjustQuantitiesInput!) {
+  inventoryAdjustQuantities(input: $input) {
+    inventoryAdjustmentGroup {
+      createdAt
+      reason
+      changes {
+        name
+        delta
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
