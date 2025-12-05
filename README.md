@@ -14,6 +14,15 @@ shopify-admin-app-with-sdk/
 ├── graphql.config.ts            # GraphQL Codegen 設定
 ├── pnpm-workspace.yaml          # モノレポ設定
 ├── tsconfig.base.json           # 共通 TypeScript 設定
+├─ infra/
+│   └─ product-master-cdk/        # ★ DynamoDB & Aurora などを定義する CDK プロジェクト
+│       ├─ package.json
+│       ├─ cdk.json
+│       ├─ tsconfig.json
+│       ├─ bin/
+│       │   └─ product-master-cdk.ts      # エントリポイント（App）
+│       └─ lib/
+│            └─ product-master-stack.ts    # DynamoDB + GSI のスタック
 └── README.md                    # ← このファイル
 ```
 # 🧩 技術スタック
