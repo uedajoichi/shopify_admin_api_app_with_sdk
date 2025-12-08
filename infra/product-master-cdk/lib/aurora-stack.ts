@@ -21,7 +21,7 @@ export class AuroraStack extends Stack {
 
     this.cluster = new rds.DatabaseCluster(this, "ProductMasterAuroraCluster", {
       engine: rds.DatabaseClusterEngine.auroraPostgres({
-        version: rds.AuroraPostgresEngineVersion.VER_15_3,
+        version: rds.AuroraPostgresEngineVersion.VER_14_6,
       }),
 
       // ★ writer は Serverless v2 インスタンスを1台だけ
